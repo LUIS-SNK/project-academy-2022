@@ -71,8 +71,10 @@ form .form-group>input:focus {
 }
 
 form .form-group>input,
-form .form-group>textarea,
-form .form-group>select,
+form .form-group-textarea{
+  background-color:  #2C2C2E;
+}
+form .form-group-select,
 form .list-group-item {
   color: #636366;
   border: 1px solid #636366;
@@ -83,6 +85,21 @@ form .form-check-input:checked {
   background-color: #FF375F;
 }
 
+.form-control:focus {
+  border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: 0px 0px 5px #FF375F inset;
+  background-color: #2C2C2E;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  padding: 10px 30px;
+  border-radius: 8px;
+  background-color: #FF375F;
+  color: white;
+  border: none;
+  text-align: center;
+  transition-duration: 0.4s;
+}
 .nav-pills .nav-item .nav-link.active,
 .primary {
   color: #F2F2F7 !important;
@@ -142,4 +159,23 @@ td img {
 
 .light-gray-3 {
   background-color: #C7C7CC !important;
+}
+
+button {
+  padding: 10px 30px;
+  border-radius: 8px;
+  background-color: #FF375F;
+  color: white;
+  border: none;
+  text-align: center;
+  transition-duration: 0.4s;
+}
+
+
+button:hover{
+  background-color: #c41034;
+}
+
+.actions {
+  text-align: right;
 }

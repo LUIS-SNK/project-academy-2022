@@ -1,2 +1,20 @@
-<h1>Directors#index</h1>
-<p>Find me in app/views/directors/index.html.erb</p>
+
+<div id="directors" class="d-flex mb-5 justify-content-between">
+  <h3> Diretores </h3>
+  <%= button_to "+ Novo", directors_new_path, :method => "get" %>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Criado em</th>
+      <th class="actions">Ações</th>
+    </tr>
+    <% @directors.each do |directors| %>
+    <tr>
+    <td><%= (directors.name) %></td>
+    <td><%= (directors.created_at) %></td>
+    </tr>
+    <% end %>
+</table>

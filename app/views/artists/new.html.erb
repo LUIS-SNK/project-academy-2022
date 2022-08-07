@@ -1,0 +1,15 @@
+<h1>Novo artista</h1>
+
+<br>
+
+<%= form_with model: @artist, url: artists_aregistration_path do |form| %>
+    
+<div class="mb-3">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+</div>
+
+<%= form.submit%>
+<% end %>
+
+<%=button_to "Cancelar", artists_path, :method => "get" %>

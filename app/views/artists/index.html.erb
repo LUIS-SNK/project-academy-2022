@@ -1,1 +1,22 @@
-<h1>Artists</h1>
+
+<div id="artists" class="d-flex mb-5 justify-content-between">
+  <h3> Artistas </h3>
+  <%= button_to "+ Novo", artists_new_path, :method => "get" %>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Criado em</th>
+      <th class="actions">Ações</th>
+    </tr>
+    <% @artists.each do |artists| %>
+    <tr>
+    <td><%= (artists.name) %></td>
+    <td><%= (formatar_data(artists.created_at)) %></td>
+    <td><%= button_to "Deletar", method: :delete %>
+    <%= button_to "Editar", artists_edit_path, :method => "get" %></td>
+    </tr>
+    <% end %>
+</table>

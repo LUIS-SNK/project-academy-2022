@@ -1,1 +1,20 @@
-<h1>Movie Genres</h1>
+
+<div id="moviegenres" class="d-flex mb-5 justify-content-between">
+  <h3> Genêros </h3>
+  <%= button_to "+ Novo", movie_genres_new_path, :method => "get" %>
+</div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Criado em</th>
+      <th class="actions">Ações</th>
+    </tr>
+    <% @moviegenres.each do |moviegenres| %>
+    <tr>
+    <td><%= (moviegenres.name) %></td>
+    <td><%= (moviegenres.created_at) %></td>
+    </tr>
+    <% end %>
+</table>

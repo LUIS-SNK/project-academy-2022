@@ -1,0 +1,15 @@
+<h1>Novo diretor</h1>
+
+<br>
+
+<%= form_with model: @director, url: directors_dregistration_path do |form| %>
+    
+<div class="mb-3">
+    <%= form.label :name%>
+    <%= form.text_field :name, class: "form-control" %>
+</div>
+
+<%= form.submit%>
+<% end %>
+
+<%=button_to "Cancelar", directors_path, :method => "get" %>
