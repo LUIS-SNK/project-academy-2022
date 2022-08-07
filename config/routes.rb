@@ -8,4 +8,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
+
+  get 'movies/index'
+  get 'artists/index'
+  get 'directors/index'
+  get 'movie_genres/index'
+
+  get "home/", to: "home#index"
+  get "home/movies", to: "movies#index"
+  get "home/artists", to: "artists#index"
+  get "home/directors", to: "directors#index"
+  get "home/movie_genres", to: "movie_genres#index"
 end
